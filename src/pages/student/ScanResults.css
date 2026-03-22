@@ -1,0 +1,398 @@
+.scan-container {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 600px;
+}
+
+.scan-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.scan-header h1 {
+  font-size: 26px;
+  color: #1a1a2e;
+  margin: 15px 0 10px;
+}
+
+.scan-header p {
+  color: #666;
+  font-size: 15px;
+}
+
+.back-btn {
+  display: inline-block;
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.scan-section {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.scan-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.scan-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 30px;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  background: white;
+  color: #667eea;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+}
+
+.scan-btn.camera {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-color: transparent;
+}
+
+.scan-btn.camera:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.scan-btn.upload:hover {
+  background: #f0f2f5;
+}
+
+.btn-icon {
+  font-size: 24px;
+}
+
+.scan-divider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 10px 0;
+}
+
+.scan-divider::before,
+.scan-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.scan-divider span {
+  padding: 0 15px;
+  color: #999;
+  font-size: 14px;
+}
+
+/* Camera Styles */
+.camera-wrapper {
+  text-align: center;
+}
+
+.camera-container {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.camera-video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.camera-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+.scan-frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  border: 3px solid #667eea;
+  border-radius: 10px;
+  box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.5);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    border-color: #667eea;
+  }
+  50% {
+    border-color: #764ba2;
+  }
+}
+
+.camera-controls {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btn-cancel {
+  padding: 12px 30px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-cancel:hover {
+  background: #5a6268;
+}
+
+.btn-capture {
+  padding: 12px 40px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-capture:hover {
+  background: #218838;
+  transform: scale(1.05);
+}
+
+.scan-instruction {
+  margin-top: 15px;
+  color: #666;
+  font-size: 14px;
+}
+
+.loading-text {
+  text-align: center;
+  color: #667eea;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 12px;
+  border-radius: 8px;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* Results Preview */
+.results-preview {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+.preview-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.preview-header h2 {
+  color: #28a745;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.preview-header p {
+  color: #666;
+}
+
+.captured-image-preview {
+  margin-bottom: 25px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.captured-image-preview img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.student-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.student-info h3 {
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  font-size: 20px;
+}
+
+.student-info p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.aps-score {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #667eea !important;
+}
+
+.aps-score strong {
+  font-size: 24px;
+}
+
+.subjects-table {
+  margin-bottom: 25px;
+}
+
+.subjects-table h3 {
+  color: #1a1a2e;
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.subjects-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subjects-table th,
+.subjects-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subjects-table th {
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+.subjects-table .mark {
+  font-weight: bold;
+  color: #667eea;
+}
+
+.subjects-table tr:hover {
+  background: #f8f9fa;
+}
+
+.action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn-confirm {
+  padding: 16px;
+  background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(40, 167, 69, 0.3);
+}
+
+.btn-rescan {
+  padding: 16px;
+  background: white;
+  color: #667eea;
+  border: 2px solid #667eea;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-rescan:hover {
+  background: #f0f2f5;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .scan-container {
+    padding: 20px 15px;
+  }
+  
+  .scan-header h1 {
+    font-size: 22px;
+  }
+  
+  .scan-section,
+  .results-preview {
+    padding: 20px;
+  }
+  
+  .camera-controls {
+    flex-direction: column;
+  }
+  
+  .btn-cancel,
+  .btn-capture {
+    width: 100%;
+  }
+  
+  .subjects-table th,
+  .subjects-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  
+  .scan-btn {
+    padding: 15px 20px;
+    font-size: 15px;
+  }
+}

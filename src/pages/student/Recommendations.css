@@ -1,0 +1,80 @@
+.rec-container {
+  padding: 30px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  min-height: 600px;
+}
+
+.rec-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.rec-header h1 {
+  font-size: 26px;
+  color: #1a1a2e;
+  margin: 15px 0 10px;
+}
+
+.back-btn {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.rec-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.rec-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.rec-header-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.rec-header-card h3 {
+  color: #1a1a2e;
+  margin: 0;
+}
+
+.match-score {
+  background: #e6f4ea;
+  color: #28a745;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.reqs {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.btn-apply {
+  width: 100%;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  .rec-container { padding: 20px 15px; }
+}
